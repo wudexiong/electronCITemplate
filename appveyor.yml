@@ -18,6 +18,4 @@ test: off
 branches:
   only:
     - master
-environment:
-  GH_TOKEN:
-    secure: <encrypt_value>
+

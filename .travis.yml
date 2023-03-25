@@ -28,6 +28,4 @@ script:
 branches:
   only:
     - master
-env:
-  global:
-    - secure: "<encrypted data>"
+
