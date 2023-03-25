@@ -8,8 +8,7 @@ cache:
 
 install:
   - ps: Install-Product node 8 x64
-  - npm install cnpm@7.1.0 -g --registry=https://registry.npm.taobao.org
-  - cnpm install
+  - npm install
 
 build_script:
   - npm run dist
