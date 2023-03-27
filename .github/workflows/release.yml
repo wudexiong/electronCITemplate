@@ -38,6 +38,11 @@ jobs:
         run: npm run build:win
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Upload Artifact Setup x64
+        uses: actions/upload-artifact@v3
+        with:
+          name: lx-music-desktop-x64-Setup
+          path: build/*
   Mac:
     name: Mac
     runs-on: macos-latest
@@ -74,6 +79,11 @@ jobs:
           ELECTRON_CACHE: $HOME/.cache/electron
           ELECTRON_BUILDERCACHE: $HOME/.cache/electron-builder
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Upload Artifact Setup x64
+        uses: actions/upload-artifact@v3
+        with:
+          name: lx-music-desktop-x64-Setup
+          path: build/*
   Linux:
     name: Linux
     runs-on: ubuntu-latest
@@ -110,3 +120,8 @@ jobs:
         run: npm run build:linux
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Upload Artifact Setup x64
+        uses: actions/upload-artifact@v3
+        with:
+          name: lx-music-desktop-x64-Setup
+          path: build/*
