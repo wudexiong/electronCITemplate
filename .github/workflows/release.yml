@@ -36,6 +36,8 @@ jobs:
 
       - name: Build Package Setup x64
         run: npm run build:win
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
   Mac:
     name: Mac
     runs-on: macos-latest
@@ -71,6 +73,7 @@ jobs:
         env:
           ELECTRON_CACHE: $HOME/.cache/electron
           ELECTRON_BUILDERCACHE: $HOME/.cache/electron-builder
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
   Linux:
     name: Linux
     runs-on: ubuntu-latest
@@ -105,3 +108,5 @@ jobs:
 
       - name: Build Package deb x64
         run: npm run build:linux
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
