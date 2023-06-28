@@ -44,7 +44,7 @@ jobs:
           name: lx-music-desktop-x64-Setup
           path: dist/*
   Mac:
-    name: Mac
+    name: MacA
     runs-on: macos-latest
     steps:
       - name: Check out git repository
