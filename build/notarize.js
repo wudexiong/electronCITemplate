@@ -31,6 +31,5 @@ module.exports = async (context) => {
   } catch (error) {
     console.error(error)
   }
-
   console.log(`done notarizing ${appId}.`)
 }
